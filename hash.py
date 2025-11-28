@@ -260,6 +260,7 @@ def print_stats(stats):
 
 
 def run_all_attempts(csv_path: str, table_size: int = 1009):
+    
     """
     Convenience function: load data, run all 5 hash functions,
     and print their statistics.
@@ -281,8 +282,17 @@ def run_all_attempts(csv_path: str, table_size: int = 1009):
 
     return all_results
 
-movies = load_movies_from_csv("MOCK_DATA(1).csv")
-stats_poly = build_two_tables(movies, table_size=1009,
-                              hash_func=hash_poly_31,
-                              func_name="poly31")
-print_stats(stats_poly)
+
+if __name__ == "__main__":
+    # ---- Attempt 1: polynomial hash (base 31) ----
+    CSV_PATH = "MOCK_DATA(1).csv"   # change name if your file is different
+    TABLE_SIZE = 1009
+
+    movies = load_movies_from_csv(CSV_PATH)
+    stats_poly = build_two_tables(
+        movies,
+        table_size=TABLE_SIZE,
+        hash_func=hash_poly_31,
+        func_name="poly31",
+    )
+    print_stats(stats_poly)
