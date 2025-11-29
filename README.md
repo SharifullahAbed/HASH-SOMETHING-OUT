@@ -70,5 +70,5 @@ Below are the required screenshots from the Colab executions:
 4 - sum_squares hash results  
 5 - two_stage hash results  
 
-Screenshots are included in the repository under the screenshots/ folder.
+Screenshots are included in the repository.
 
