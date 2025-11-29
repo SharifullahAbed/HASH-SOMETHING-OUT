@@ -1,3 +1,28 @@
+"""
+COS 226 – Hash Something Out
+Sharifullah Abed
+
+This program implements two separate-chaining hash tables:
+  - One keyed by movie title
+  - One keyed by movie quote
+
+It loads 15,000 fmovie records from a CSV file, then builds the two hash
+tables using five fundamentally different hash functions:
+  poly31, djb2, fnv1a, sum_squares, and two_stage.
+
+For each hash function, it reports:
+  - Number of items inserted
+  - Number of collisions
+  - Number of used and wasted (empty) buckets
+  - Longest chain length
+  - Time taken to construct the tables
+
+These statistics are used to compare the performance and behavior of the
+different hash function designs.
+"""
+
+
+
 import csv
 import time
 from dataclasses import dataclass
