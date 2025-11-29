@@ -58,3 +58,17 @@ Across the five hash functions tested on the 15,000-record dataset, all function
 5. fnv1a was the slowest at over 4 seconds, likely because it performs 64-bit multiplication on every character.
 
 In terms of spreading keys across buckets, all functions produced very similar collision counts, but fnv1a created the longest chains, while djb2 and two_stage produced slightly shorter ones. Overall, sum_squares offered the best trade-off between speed and chain length for this dataset.
+
+
+## Screenshots
+
+Below are the required screenshots from the Colab executions:
+
+1 - poly31 hash results  
+2 - djb2 hash results  
+3 - fnv1a hash results  
+4 - sum_squares hash results  
+5 - two_stage hash results  
+
+Screenshots are included in the repository under the screenshots/ folder.
+
